@@ -1,0 +1,133 @@
+schema kimi_chunk {
+  document kimi_chunk {
+    field tenant_id type string {
+      indexing: attribute | summary
+      attribute: fast-search
+    }
+    field document_id type string {
+      indexing: attribute | summary
+      attribute: fast-search
+    }
+    field chunk_index type int {
+      indexing: attribute | summary
+    }
+    field title type string {
+      indexing: index | summary
+      index: enable-bm25
+    }
+    field content type string {
+      indexing: index | summary
+      index: enable-bm25
+    }
+    field blurb type string {
+      indexing: summary
+    }
+    field link type string {
+      indexing: attribute | summary
+    }
+    field source_type type string {
+      indexing: attribute | summary
+      attribute: fast-search
+    }
+    field access_control_list type array<string> {
+      indexing: attribute | summary
+      attribute: fast-search
+    }
+    field kb_source_type type string {
+      indexing: attribute | summary
+    }
+    field kb_visibility type string {
+      indexing: attribute | summary
+    }
+    field kb_external_ref type string {
+      indexing: attribute | summary
+    }
+    field kb_created_by_user_id type string {
+      indexing: attribute | summary
+    }
+    field source_connector_type type string {
+      indexing: attribute | summary
+    }
+    field source_visibility type string {
+      indexing: attribute | summary
+    }
+    field source_external_ref type string {
+      indexing: attribute | summary
+    }
+    field source_created_by_user_id type string {
+      indexing: attribute | summary
+    }
+    field last_updated type long {
+      indexing: attribute | summary
+    }
+    field content_vector type tensor<float>(d[768]) {
+      indexing: attribute | index
+      attribute {
+        distance-metric: angular
+      }
+      index {
+        hnsw {
+          max-links-per-node: 16
+          neighbors-to-explore-at-insert: 200
+        }
+      }
+    }
+    field title_vector type tensor<float>(d[768]) {
+      indexing: attribute | index
+      attribute {
+        distance-metric: angular
+      }
+      index {
+        hnsw {
+          max-links-per-node: 16
+          neighbors-to-explore-at-insert: 200
+        }
+      }
+    }
+  }
+
+  fieldset default {
+    fields: title, content
+  }
+
+  rank-profile default {
+    inputs {
+      query(query_vector) tensor<float>(d[768])
+    }
+    first-phase {
+      expression: bm25(title) + bm25(content)
+    }
+  }
+
+  rank-profile hybrid {
+    inputs {
+      query(query_vector) tensor<float>(d[768])
+    }
+
+    # last_updated is stored as epoch milliseconds; Vespa now() is seconds.
+    function document_age_years() {
+      expression {
+        max(
+          (now() - attribute(last_updated) / 1000.0) / 31536000.0,
+          0
+        )
+      }
+    }
+
+    # Decay from 1.0 toward 0.75 as the document ages (Onyx-style recency bias).
+    function recency_bias() {
+      expression: max(1.0 / (1.0 + 0.5 * document_age_years), 0.75)
+    }
+
+    first-phase {
+      expression {
+        (
+          bm25(title) * 0.2 +
+          bm25(content) +
+          closeness(field, content_vector) +
+          closeness(field, title_vector) * 0.1
+        ) * recency_bias
+      }
+    }
+  }
+}

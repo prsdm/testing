@@ -1,0 +1,25 @@
+{
+  "name": "kimiro",
+  "version": "3.1.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --dir frontend dev",
+    "dev:backend": "pnpm --dir backend dev",
+    "build": "pnpm build:frontend && pnpm build:backend",
+    "build:frontend": "pnpm --dir frontend build",
+    "build:backend": "pnpm --dir backend build",
+    "lint": "pnpm lint:frontend && pnpm lint:backend",
+    "lint:fix": "pnpm --dir frontend lint:fix && pnpm --dir backend lint:fix",
+    "lint:frontend": "pnpm --dir frontend lint",
+    "lint:backend": "pnpm --dir backend lint",
+    "check": "pnpm check:frontend && pnpm check:backend",
+    "check:frontend": "pnpm --dir frontend check",
+    "check:backend": "pnpm --dir backend check",
+    "test": "pnpm test:frontend && pnpm test:backend",
+    "test:frontend": "pnpm --dir frontend test",
+    "test:backend": "pnpm --dir backend test",
+    "start:frontend": "pnpm --dir frontend preview",
+    "start:backend": "pnpm --dir backend start"
+  },
+  "packageManager": "pnpm@10.32.1"
+}

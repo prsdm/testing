@@ -1,0 +1,29 @@
+# Mac dev: Vespa in Docker only.
+#
+#   docker compose -f docker-compose.mac.yml up -d
+#   docker compose up -d model_server indexing_model_server
+
+services:
+  vespa:
+    image: vespaengine/vespa:8.609.39
+    hostname: vespa
+    environment:
+      - VESPA_SKIP_UPGRADE_CHECK=true
+    ports:
+      - "8080:8080"
+      - "19071:19071"
+    volumes:
+      - vespa-data:/opt/vespa/var
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -sf http://localhost:19071/state/v1/health >/dev/null || exit 1",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+volumes:
+  vespa-data:

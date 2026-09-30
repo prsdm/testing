@@ -1,0 +1,56 @@
+name: kimiro-production-template
+
+services:
+  migrate:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile.migrate
+    image: kimiro-migration:local
+    restart: "no"
+    environment:
+      POSTGRES_URL: ${POSTGRES_URL:?set POSTGRES_URL for the release job}
+
+  api:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    image: kimiro-api:local
+    restart: unless-stopped
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?set BETTER_AUTH_SECRET}
+      BETTER_AUTH_URL: ${BETTER_AUTH_URL:?set the public browser origin}
+      KIMIRO_API_PORT: "3002"
+      KIMIRO_WEB_ORIGIN: ${KIMIRO_WEB_ORIGIN:?set the public browser origin}
+      POSTGRES_URL: ${POSTGRES_URL:?set POSTGRES_URL}
+      REDIS_URL: ${REDIS_URL:-}
+    expose:
+      - "3002"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3002/ping').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
+
+  web:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    image: kimiro-web:local
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      API_UPSTREAM: http://api:3002
+    ports:
+      - "${KIMIRO_EDGE_PORT:-8080}:8080"

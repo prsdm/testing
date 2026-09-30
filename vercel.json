@@ -1,0 +1,15 @@
+{
+  "env": {
+    "VITE_PREVIEW_MODE": "1"
+  },
+  "installCommand": "npm install -g pnpm@10.32.1 && pnpm --dir frontend install --frozen-lockfile",
+  "buildCommand": "VITE_PREVIEW_MODE=1 pnpm --dir frontend build",
+  "outputDirectory": "frontend/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

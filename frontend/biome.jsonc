@@ -1,0 +1,99 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "useSortedKeys": "off"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "src/**",
+      "vite.config.ts",
+      "index.html",
+      "!dist",
+      "!node_modules"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noUnknownAtRules": "off",
+        "noConsole": "off",
+        "noBitwiseOperators": "off",
+        "noLeakedRender": "off",
+        "noUnnecessaryConditions": "off",
+        "noEqualsToNull": "off",
+        "noShadow": "off",
+        "noEmptyBlockStatements": "off",
+        "noNestedPromises": "off"
+      },
+      "style": {
+        "noMagicNumbers": "off",
+        "noNestedTernary": "off",
+        "useConsistentTypeDefinitions": "off",
+        "useDestructuring": "off",
+        "noIncrementDecrement": "off",
+        "useErrorCause": "off"
+      },
+      "nursery": {
+        "useSortedClasses": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off",
+        "noVoid": "off",
+        "useSimplifiedLogicExpression": "off",
+        "noUselessCatchBinding": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "correctness": {
+        "useUniqueElementIds": "off",
+        "useImageSize": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "useTopLevelRegex": "off",
+        "noJsxPropsBind": "off",
+        "noAwaitInLoops": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/shims/**"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "useAwait": "off"
+          },
+          "performance": {
+            "noImgElement": "off"
+          },
+          "style": {
+            "useFilenamingConvention": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off",
+            "useReactFunctionComponents": "off"
+          }
+        }
+      }
+    }
+  ]
+}

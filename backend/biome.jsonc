@@ -1,0 +1,86 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core"],
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "useSortedKeys": "off"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "src/**",
+      "scripts/**",
+      "build.mjs",
+      "drizzle.config.ts",
+      "!dist",
+      "!node_modules",
+      "!migrations",
+      "!src/core/lib/sandbox/skills",
+      "!vespa"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noConsole": "off",
+        "noBitwiseOperators": "off",
+        "noUnnecessaryConditions": "off",
+        "noEqualsToNull": "off",
+        "noShadow": "off",
+        "noEmptyBlockStatements": "off"
+      },
+      "style": {
+        "noMagicNumbers": "off",
+        "noNestedTernary": "off",
+        "useConsistentTypeDefinitions": "off",
+        "useDestructuring": "off",
+        "noIncrementDecrement": "off",
+        "useErrorCause": "off",
+        "useConsistentMethodSignatures": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off",
+        "noVoid": "off",
+        "useSimplifiedLogicExpression": "off",
+        "noUselessCatchBinding": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "useTopLevelRegex": "off",
+        "noAwaitInLoops": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/routes/**/*.ts"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noNamespaceImport": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/load-*.ts"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noNamespaceImport": "off"
+          },
+          "suspicious": {
+            "useAwait": "off"
+          }
+        }
+      }
+    }
+  ]
+}

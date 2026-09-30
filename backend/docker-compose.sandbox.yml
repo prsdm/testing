@@ -1,0 +1,13 @@
+services:
+  sandbox-executor:
+    build:
+      context: ./docker/sandbox-executor
+    image: kimiro/sandbox-executor:local
+    restart: unless-stopped
+    ports:
+      - "${SANDBOX_EXECUTOR_PORT:-8089}:8089"
+    environment:
+      SANDBOX_SESSIONS_ROOT: /workspace/sessions
+      PORT: "8089"
+    volumes:
+      - ./.sandbox-sessions:/workspace/sessions

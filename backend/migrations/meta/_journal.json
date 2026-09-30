@@ -1,0 +1,804 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1778052755076,
+      "tag": "0000_mute_jane_foster",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1778057478894,
+      "tag": "0001_icy_sentinels",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1778060820000,
+      "tag": "0002_silent_people_sync",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1778060820001,
+      "tag": "0003_security_audit_events",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1778060820002,
+      "tag": "0004_remove_scim",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1778060820003,
+      "tag": "0005_tenant_members",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1778060820004,
+      "tag": "0006_tenant_search_indexing",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1778060820005,
+      "tag": "0007_tenant_drive_memberships",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1778060820006,
+      "tag": "0008_tenant_drive_index_state",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1778060820007,
+      "tag": "0009_tenant_data_plane_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1778060820008,
+      "tag": "0010_tenant_drive_actions",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1778060820009,
+      "tag": "0011_tenant_connections",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1778060820010,
+      "tag": "0012_personal_team_kb",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1778060820011,
+      "tag": "0013_kb_acl",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1778060820012,
+      "tag": "0014_kb_drive_sync_metadata",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1778060820013,
+      "tag": "0015_kb_drive_sync_metadata_repair",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1778060820014,
+      "tag": "0016_kb_confluence_source_type",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1778060820015,
+      "tag": "0017_tenant_confluence_actions",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1778060820016,
+      "tag": "0018_tenant_confluence_oauth",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1778060820017,
+      "tag": "0019_tenant_managed_credentials_mode",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1778060820018,
+      "tag": "0020_notion_actions_and_kb_source",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1778211000000,
+      "tag": "0021_sharepoint_actions_and_kb_source",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1778300000000,
+      "tag": "0022_drop_tenant_drive_allow_write",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1778400000000,
+      "tag": "0023_kb_source_external_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1778500000000,
+      "tag": "0024_drop_tenant_drive_allow_create",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1778600000000,
+      "tag": "0025_slack_actions",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1778700000000,
+      "tag": "0026_jira_actions",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1778800000000,
+      "tag": "0027_agents",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1778900000000,
+      "tag": "0028_agent_kb_sources",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1779100000000,
+      "tag": "0030_connection_to_connector",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1779200000000,
+      "tag": "0029_agent_kb_items",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1779300000000,
+      "tag": "0031_tenant_llm_providers",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "7",
+      "when": 1779500000000,
+      "tag": "0033_tenant_member_role_basic",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "7",
+      "when": 1779600000000,
+      "tag": "0034_tenant_integration_availability",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1779700000000,
+      "tag": "0035_tenant_general_settings",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1779800000000,
+      "tag": "0036_drop_tenant_branding_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "7",
+      "when": 1779900000000,
+      "tag": "0037_max_indexed_content_size_mb",
+      "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1780000000000,
+      "tag": "0038_rename_team_context_to_workspace_prompt",
+      "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1780100000000,
+      "tag": "0039_chat_tables_public",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1780200000000,
+      "tag": "0040_drop_tenant_data_plane_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 42,
+      "version": "7",
+      "when": 1780300000000,
+      "tag": "0041_agent_sharing",
+      "breakpoints": true
+    },
+    {
+      "idx": 43,
+      "version": "7",
+      "when": 1780400000000,
+      "tag": "0042_agent_user_knowledge",
+      "breakpoints": true
+    },
+    {
+      "idx": 44,
+      "version": "7",
+      "when": 1780500000000,
+      "tag": "0043_sana_agent_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 45,
+      "version": "7",
+      "when": 1780600000000,
+      "tag": "0044_agent_access_use_role",
+      "breakpoints": true
+    },
+    {
+      "idx": 46,
+      "version": "7",
+      "when": 1780700000000,
+      "tag": "0045_agent_sharing_workspace_use_only",
+      "breakpoints": true
+    },
+    {
+      "idx": 48,
+      "version": "7",
+      "when": 1780900000000,
+      "tag": "0047_tenant_member_job_title",
+      "breakpoints": true
+    },
+    {
+      "idx": 49,
+      "version": "7",
+      "when": 1780950000000,
+      "tag": "0046_drop_agent_workspace_default",
+      "breakpoints": true
+    },
+    {
+      "idx": 50,
+      "version": "7",
+      "when": 1781000000000,
+      "tag": "0048_tenant_search_baai_defaults",
+      "breakpoints": true
+    },
+    {
+      "idx": 51,
+      "version": "7",
+      "when": 1781050000000,
+      "tag": "0049_tenant_search_bge_m3_defaults",
+      "breakpoints": true
+    },
+    {
+      "idx": 52,
+      "version": "7",
+      "when": 1781100000000,
+      "tag": "0051_tenant_search_tei_bge_base_defaults",
+      "breakpoints": true
+    },
+    {
+      "idx": 53,
+      "version": "7",
+      "when": 1781150000000,
+      "tag": "0052_tenant_connector_user_external_groups",
+      "breakpoints": true
+    },
+    {
+      "idx": 54,
+      "version": "7",
+      "when": 1781200000000,
+      "tag": "0053_agent_icon",
+      "breakpoints": true
+    },
+    {
+      "idx": 55,
+      "version": "7",
+      "when": 1781250000000,
+      "tag": "0054_drop_agent_icon_key",
+      "breakpoints": true
+    },
+    {
+      "idx": 56,
+      "version": "7",
+      "when": 1781300000000,
+      "tag": "0055_agent_icon_remove_red_pink",
+      "breakpoints": true
+    },
+    {
+      "idx": 57,
+      "version": "7",
+      "when": 1781350000000,
+      "tag": "0056_team_kb_access_control_list",
+      "breakpoints": true
+    },
+    {
+      "idx": 58,
+      "version": "7",
+      "when": 1781400000000,
+      "tag": "0057_team_kb_last_indexed_at",
+      "breakpoints": true
+    },
+    {
+      "idx": 59,
+      "version": "7",
+      "when": 1781450000000,
+      "tag": "0058_tenant_web_search_providers",
+      "breakpoints": true
+    },
+    {
+      "idx": 60,
+      "version": "7",
+      "when": 1781500000000,
+      "tag": "0059_tenant_web_search_settings",
+      "breakpoints": true
+    },
+    {
+      "idx": 61,
+      "version": "7",
+      "when": 1781550000000,
+      "tag": "0060_llm_provider_google",
+      "breakpoints": true
+    },
+    {
+      "idx": 62,
+      "version": "7",
+      "when": 1781600000000,
+      "tag": "0061_drop_tenant_general_settings_logo_url",
+      "breakpoints": true
+    },
+    {
+      "idx": 63,
+      "version": "7",
+      "when": 1781650000000,
+      "tag": "0062_tenant_member_profile_onboarding",
+      "breakpoints": true
+    },
+    {
+      "idx": 64,
+      "version": "7",
+      "when": 1781700000000,
+      "tag": "0063_tenant_slack_index_state",
+      "breakpoints": true
+    },
+    {
+      "idx": 65,
+      "version": "7",
+      "when": 1781750000000,
+      "tag": "0064_kb_source_type_slack",
+      "breakpoints": true
+    },
+    {
+      "idx": 66,
+      "version": "7",
+      "when": 1781800000000,
+      "tag": "0065_tenant_member_department",
+      "breakpoints": true
+    },
+    {
+      "idx": 67,
+      "version": "7",
+      "when": 1781850000000,
+      "tag": "0066_agent_people_search_enabled",
+      "breakpoints": true
+    },
+    {
+      "idx": 68,
+      "version": "7",
+      "when": 1781900000000,
+      "tag": "0067_slack_index_owned_by",
+      "breakpoints": true
+    },
+    {
+      "idx": 69,
+      "version": "7",
+      "when": 1781950000000,
+      "tag": "0068_agent_schedules",
+      "breakpoints": true
+    },
+    {
+      "idx": 70,
+      "version": "7",
+      "when": 1782000000000,
+      "tag": "0069_agent_schedule_prompt",
+      "breakpoints": true
+    },
+    {
+      "idx": 71,
+      "version": "7",
+      "when": 1782050000000,
+      "tag": "0070_agent_schedule_interval",
+      "breakpoints": true
+    },
+    {
+      "idx": 72,
+      "version": "7",
+      "when": 1782100000000,
+      "tag": "0071_agent_schedule_frequency",
+      "breakpoints": true
+    },
+    {
+      "idx": 73,
+      "version": "7",
+      "when": 1782150000000,
+      "tag": "0072_agent_schedule_slack_delivery",
+      "breakpoints": true
+    },
+    {
+      "idx": 74,
+      "version": "7",
+      "when": 1782200000000,
+      "tag": "0073_document_drive_link",
+      "breakpoints": true
+    },
+    {
+      "idx": 75,
+      "version": "7",
+      "when": 1782250000000,
+      "tag": "0074_agent_reasoning_effort",
+      "breakpoints": true
+    },
+    {
+      "idx": 76,
+      "version": "7",
+      "when": 1782300000000,
+      "tag": "0075_sources_rename",
+      "breakpoints": true
+    },
+    {
+      "idx": 77,
+      "version": "7",
+      "when": 1782350000000,
+      "tag": "0076_tenant_workspace_logo",
+      "breakpoints": true
+    },
+    {
+      "idx": 78,
+      "version": "7",
+      "when": 1782400000000,
+      "tag": "0077_tenant_custom_roles",
+      "breakpoints": true
+    },
+    {
+      "idx": 79,
+      "version": "7",
+      "when": 1782500000000,
+      "tag": "0078_tenant_invites_and_rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 80,
+      "version": "7",
+      "when": 1782600000000,
+      "tag": "0079_tenant_owner_auth_user",
+      "breakpoints": true
+    },
+    {
+      "idx": 81,
+      "version": "7",
+      "when": 1782700000000,
+      "tag": "0080_tenant_usage_billing",
+      "breakpoints": true
+    },
+    {
+      "idx": 82,
+      "version": "7",
+      "when": 1782800000000,
+      "tag": "0081_tenant_member_usage_quota",
+      "breakpoints": true
+    },
+    {
+      "idx": 83,
+      "version": "7",
+      "when": 1782900000000,
+      "tag": "0082_tenant_billing_stripe",
+      "breakpoints": true
+    },
+    {
+      "idx": 84,
+      "version": "7",
+      "when": 1783000000000,
+      "tag": "0083_tenant_topup_credits",
+      "breakpoints": true
+    },
+    {
+      "idx": 85,
+      "version": "7",
+      "when": 1783100000000,
+      "tag": "0084_per_seat_allowance_18",
+      "breakpoints": true
+    },
+    {
+      "idx": 86,
+      "version": "7",
+      "when": 1783200000000,
+      "tag": "0085_drop_agent_schedules",
+      "breakpoints": true
+    },
+    {
+      "idx": 87,
+      "version": "7",
+      "when": 1783300000000,
+      "tag": "0086_drop_custom_agents",
+      "breakpoints": true
+    },
+    {
+      "idx": 88,
+      "version": "7",
+      "when": 1783400000000,
+      "tag": "0087_projects_pgvector",
+      "breakpoints": true
+    },
+    {
+      "idx": 89,
+      "version": "7",
+      "when": 1783410000000,
+      "tag": "0088_team_source_project_id",
+      "breakpoints": true
+    },
+    {
+      "idx": 90,
+      "version": "7",
+      "when": 1783420000000,
+      "tag": "0089_chat_tool_approvals",
+      "breakpoints": true
+    },
+    {
+      "idx": 91,
+      "version": "7",
+      "when": 1786596000000,
+      "tag": "0090_durable_chat_workflows",
+      "breakpoints": true
+    },
+    {
+      "idx": 92,
+      "version": "7",
+      "when": 1786600000000,
+      "tag": "0091_drop_chat_tool_approvals",
+      "breakpoints": true
+    },
+    {
+      "idx": 93,
+      "version": "7",
+      "when": 1786700000000,
+      "tag": "0092_chat_context_summary",
+      "breakpoints": true
+    },
+    {
+      "idx": 94,
+      "version": "7",
+      "when": 1786800000000,
+      "tag": "0093_library_files",
+      "breakpoints": true
+    },
+    {
+      "idx": 95,
+      "version": "7",
+      "when": 1786900000000,
+      "tag": "0094_tenant_usage_image_generation",
+      "breakpoints": true
+    },
+    {
+      "idx": 96,
+      "version": "7",
+      "when": 1787730000000,
+      "tag": "0095_tenant_sandbox",
+      "breakpoints": true
+    },
+    {
+      "idx": 97,
+      "version": "7",
+      "when": 1787731000000,
+      "tag": "0096_tenant_sandbox_work_skills",
+      "breakpoints": true
+    },
+    {
+      "idx": 98,
+      "version": "7",
+      "when": 1787732000000,
+      "tag": "0097_library_file_drive_link",
+      "breakpoints": true
+    },
+    {
+      "idx": 99,
+      "version": "7",
+      "when": 1787733000000,
+      "tag": "0098_tenant_slack_bot_settings",
+      "breakpoints": true
+    },
+    {
+      "idx": 100,
+      "version": "7",
+      "when": 1787734000000,
+      "tag": "0099_tenant_slack_bot_threads",
+      "breakpoints": true
+    },
+    {
+      "idx": 101,
+      "version": "7",
+      "when": 1787735000000,
+      "tag": "0100_project_description",
+      "breakpoints": true
+    },
+    {
+      "idx": 102,
+      "version": "7",
+      "when": 1787736000000,
+      "tag": "0101_tenant_default_chat_reasoning",
+      "breakpoints": true
+    },
+    {
+      "idx": 103,
+      "version": "7",
+      "when": 1787740000000,
+      "tag": "0102_rename_projects_to_knowledge_bases",
+      "breakpoints": true
+    },
+    {
+      "idx": 104,
+      "version": "7",
+      "when": 1787745000000,
+      "tag": "0103_rename_slack_bot_to_slack_integration",
+      "breakpoints": true
+    },
+    {
+      "idx": 105,
+      "version": "7",
+      "when": 1787750000000,
+      "tag": "0104_tenant_mcp_servers",
+      "breakpoints": true
+    },
+    {
+      "idx": 106,
+      "version": "7",
+      "when": 1787755000000,
+      "tag": "0105_tenant_member_preferred_name",
+      "breakpoints": true
+    },
+    {
+      "idx": 107,
+      "version": "7",
+      "when": 1787760000000,
+      "tag": "0106_knowledge_base_members",
+      "breakpoints": true
+    },
+    {
+      "idx": 108,
+      "version": "7",
+      "when": 1787765000000,
+      "tag": "0107_chat_channels",
+      "breakpoints": true
+    },
+    {
+      "idx": 109,
+      "version": "7",
+      "when": 1787770000000,
+      "tag": "0108_channel_knowledge_bases",
+      "breakpoints": true
+    },
+    {
+      "idx": 110,
+      "version": "7",
+      "when": 1787780000000,
+      "tag": "0110_chat_dms",
+      "breakpoints": true
+    },
+    {
+      "idx": 111,
+      "version": "7",
+      "when": 1787785000000,
+      "tag": "0111_message_threads",
+      "breakpoints": true
+    },
+    {
+      "idx": 112,
+      "version": "7",
+      "when": 1787790000000,
+      "tag": "0112_chat_participant_last_read",
+      "breakpoints": true
+    },
+    {
+      "idx": 113,
+      "version": "7",
+      "when": 1787795000000,
+      "tag": "0113_group_dms",
+      "breakpoints": true
+    },
+    {
+      "idx": 114,
+      "version": "7",
+      "when": 1787800000000,
+      "tag": "0114_message_reactions",
+      "breakpoints": true
+    },
+    {
+      "idx": 115,
+      "version": "7",
+      "when": 1787805000000,
+      "tag": "0116_channel_thread_topic_catalog",
+      "breakpoints": true
+    },
+    {
+      "idx": 116,
+      "version": "7",
+      "when": 1787810000000,
+      "tag": "0117_rename_thread_topic_to_tag",
+      "breakpoints": true
+    }
+  ]
+}

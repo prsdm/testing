@@ -1,0 +1,15 @@
+.git
+.github
+.cursor
+.env
+.env.*
+**/.env
+**/.env.*
+**/node_modules
+**/dist
+**/build
+coverage
+playwright-report
+test-results
+*.log
+*.pem
