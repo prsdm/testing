@@ -2,8 +2,8 @@
   "env": {
     "VITE_PREVIEW_MODE": "1"
   },
-  "installCommand": "npm install -g pnpm@10.32.1 && pnpm install --frozen-lockfile",
-  "buildCommand": "VITE_PREVIEW_MODE=1 pnpm build",
+  "installCommand": "npx -y pnpm@10.32.1 install --frozen-lockfile",
+  "buildCommand": "VITE_PREVIEW_MODE=1 npx -y pnpm@10.32.1 run build",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
